@@ -14,7 +14,9 @@
 
 $page_title = 'View the Current Users';
 include ('includes/head.php');
-echo '<h1>Registered Users</h1>';
+echo "   <div class=\"w3-card-4 w3-margin w3-white w3-round-xlarge\">\n";
+echo "       <div class=\"w3-container\">\n";
+echo '          <h1>Registered Users</h1>';
 
 require ('includes/mysqli_connect.php');
 
@@ -96,6 +98,8 @@ while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 } // End of WHILE loop.
 
 echo '</table>';
+echo"       </div>\n";
+echo"   </div>\n";
 mysqli_free_result ($r);
 mysqli_close($dbc);
 

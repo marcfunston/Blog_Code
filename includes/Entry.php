@@ -72,7 +72,7 @@ class Entry
     public function setComment($comment) { 
         $this->comment = $comment; 
     }
-    public function getComment($comment) { 
+    public function getComment() { 
         return $this->comment; 
     } 
 
