@@ -100,9 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !isset($_FILES['upload'])) {
 			// Public message:
 			echo '<h1></h1>
 			<p class="error">You could not post due to a system error. We apologize for any inconvenience.</p>'; 
-			
 
-						
 		} // End of if ($r) IF.
 		
 		mysqli_close($dbc); // Close the database connection.

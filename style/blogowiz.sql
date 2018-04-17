@@ -39,15 +39,16 @@ INDEX (entry_date)
 );
 
 CREATE TABLE messages (
-contact_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+user_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
 email TINYINT UNSIGNED NOT NULL,
 message VARCHAR(255) NOT NULL,
 contact_date DATETIME NOT NULL,
-PRIMARY KEY (contact_id)
+PRIMARY KEY (user_id)
 );
 
 CREATE TABLE pictures(
 picture_id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+user_id TINYINT UNSIGNED NOT NULL,
 title VARCHAR(20),
 description VARCHAR(20),
 link VARCHAR(128),
@@ -98,6 +99,16 @@ on delete cascade;
 alter table map_users_to_posts
 add foreign key(entry_number)
 references posts(entry_number)
+on delete cascade;
+
+alter table messages
+add foreign key(user_id)
+references users(user_id)
+on delete cascade;
+
+alter table pictures
+add foreign key(user_id)
+references users(user_id)
 on delete cascade;
 
 INSERT INTO users (first_name, last_name, admin, user_name, email, password, registration_date) VALUES
