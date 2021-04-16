@@ -12,6 +12,9 @@
  * Last Edit Date: 4/06/2018
  * Line count is 2110
  * 
+ * The sql file is located in the "Style" folder and will provide a usable 
+ * database to start the program with. -- Updated 4/16/2021
+ *
  */
 
 
